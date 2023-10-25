@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        #registration-form {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="registration-form">
+        <h2>Registration Form</h2>
+        <form id="user-registration-form">
+        <p>Dear student,</p>
+        <p>Please fill the fowling application for fresher’s job</p>
+            <label for="name"><b>Name of the applicant</b> <a style="color:red">*</a>:</label>
+            <input type="text" id="name" name="name" required>
+<label for="resident"><b>Are you the resident of India</b> <a style="color:red">*</a>:</label>
+<a>
+<input type="radio" name="yes_no" checked>Yes</input>
+</a>
+<a>
+<input type="radio" name="yes_no">No</input>
+</a>
+<label for="state"><b>Applicant State</b> <a style="color:red">*</a>:</label>
+<select id="cars">
+  <option value="ArP">Arunachal Pradesh</option>
+  <option value="AP">Andhra pradesh</option>
+  <option value="As">Assam</option>
+  <option value="TS">Telangana</option>
+  <option value="NL">Nagaland</option>
+  <option value="Mz">Mizoram</option>
+  <option value="Mp">Manipur</option>
+</select>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <center><input type="submit" value="Submit"></center>
+        </form>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById("user-registration-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            window.location.href = "home.html";
+        });
+    </script>
+</body>
+</html>
+
